@@ -1,21 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { Text, View, StyleSheet, Image } from 'react-native'
 
-export default function App() {
+const App = () => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Image
+        source={{ uri: 'https://sergiobaltanas.com/wp-content/uploads/2021/10/prueba-podcast.png' }}
+        style={styles.image}
+      />
+      <Text style={styles.text}>Bienvenido a PodToApp</Text>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: '#FCAF16',
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center'
   },
-});
+  text: {
+    fontSize: 30,
+  },
+  image: {
+    height: 200,
+    width: 200,
+    marginBottom: 100
+  }
+})
+
+export default App

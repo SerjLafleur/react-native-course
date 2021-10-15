@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, StyleSheet, Image } from 'react-native'
+import { Text, View, StyleSheet, Image, Button, Alert } from 'react-native'
 
 const App = () => {
   return (
@@ -9,6 +9,11 @@ const App = () => {
         style={styles.image}
       />
       <Text style={styles.text}>Bienvenido a PodToApp</Text>
+      <Button
+        color='black'
+        title='Press Me'
+        onPress={() => Alert.alert('Mi primera app')}
+      />
     </View>
   )
 }
